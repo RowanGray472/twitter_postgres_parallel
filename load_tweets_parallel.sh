@@ -10,7 +10,7 @@ time echo "$files" | parallel ./load_denormalized.sh
 echo '================================================================================'
 echo 'load pg_normalized'
 echo '================================================================================'
-# FIXME: implement this with GNU parallel
+time echo "$files" | parallel python3 ./load_tweets.py
 
 echo '================================================================================'
 echo 'load pg_normalized_batch'
